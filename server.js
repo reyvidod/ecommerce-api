@@ -13,9 +13,11 @@ app.use(bodyParser.json());
 
 //import routes
 const user = require("./routes/user");
+const product = require("./routes/product");
 
 //use routes
 app.use("/user", user);
+app.use("/product", product);
 
 const PORT = process.env.PORT || 5000;
 
