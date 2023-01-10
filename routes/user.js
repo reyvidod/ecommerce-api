@@ -16,6 +16,8 @@ router.post("/register", (req, res) => {
     role: req.body.role,
     phone: req.body.phone,
     address: req.body.address,
+    city: req.body.city,
+    zip: req.body.zip,
   });
 
   //Password encryption using crypto-js

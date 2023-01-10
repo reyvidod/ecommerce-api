@@ -40,6 +40,14 @@ const userSchema = mongoose.Schema(
       maxLength: [250, "Address must not be more than 250 characters"],
       default: "myaddress",
     },
+    city: {
+      type: String,
+      required: true,
+    },
+    zip: {
+      type: Number,
+      required: true,
+    },
   },
   {
     timestamps: true,
