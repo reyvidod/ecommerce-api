@@ -3,8 +3,19 @@ const express = require("express");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const cors = require("cors");
-
 const app = express();
+
+//middlewares
+app.use(express.json());
+app.use(cors());
+app.use(express.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+
+//import routes
+const user = require("./routes/user");
+
+//use routes
+app.use("/user", user);
 
 const PORT = process.env.PORT || 5000;
 
